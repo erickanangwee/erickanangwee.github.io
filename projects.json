@@ -1,0 +1,82 @@
+[
+  {
+    "title": "RAG Chatbot for REP4FinLit",
+    "date": "2026-05",
+    "description": "Retrieval-augmented chatbot for a LearnWorlds-hosted financial literacy platform. Combines Azure AI Search with Azure OpenAI for grounded answers, served through a FastAPI backend.",
+    "tags": ["RAG", "Azure OpenAI", "Azure AI Search", "FastAPI"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "GVSU Admissions Chatbot",
+    "date": "2026-04",
+    "description": "Pivoted from a traditional RAG pipeline to a live Google Custom Search Engine restricted to gvsu.edu, paired with a GVSU-branded React frontend for accurate, always-current answers.",
+    "tags": ["React", "Google CSE", "Search"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Tomato Disease Detection",
+    "date": "2026-03",
+    "description": "YOLOv5-based microservice that detects tomato plant diseases from photos, with SVG bounding-box overlays and adjustable confidence thresholds. Deployed on Vercel.",
+    "tags": ["YOLOv5", "Computer Vision", "Vercel"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "PhishGuard AI",
+    "date": "2026-02",
+    "description": "Phishing detection web app using the Anthropic API to score URLs and messages for risk, with a scan history view for tracking past checks.",
+    "tags": ["Anthropic API", "Security", "Web App"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Add your next project here",
+    "date": "2026-01",
+    "description": "Replace this entry with a real project. Copy this block, fill in title/date/description/tags/links, and it will show up on the site automatically.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Project placeholder 6",
+    "date": "2025-12",
+    "description": "Replace with project details.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Project placeholder 7",
+    "date": "2025-11",
+    "description": "Replace with project details.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Project placeholder 8",
+    "date": "2025-10",
+    "description": "Replace with project details.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Project placeholder 9",
+    "date": "2025-09",
+    "description": "Replace with project details.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  },
+  {
+    "title": "Project placeholder 10",
+    "date": "2025-08",
+    "description": "Replace with project details.",
+    "tags": ["placeholder"],
+    "link": "",
+    "repo": ""
+  }
+]

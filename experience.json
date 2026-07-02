@@ -1,0 +1,16 @@
+[
+  {
+    "role": "AI DevOps Engineer",
+    "org": "REP4FinLit",
+    "start": "2025",
+    "end": "Present",
+    "description": "Building and operating ML/AI systems for a financial literacy learning platform, including a production RAG chatbot and supporting infrastructure."
+  },
+  {
+    "role": "Add your next role here",
+    "org": "Company name",
+    "start": "Year",
+    "end": "Year",
+    "description": "Replace this entry with real experience details."
+  }
+]

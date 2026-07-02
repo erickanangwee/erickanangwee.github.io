@@ -1,0 +1,6 @@
+[
+  { "category": "MLOps & Infra", "items": ["DVC", "MLflow", "Docker", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana"] },
+  { "category": "AI / ML", "items": ["RAG Pipelines", "Computer Vision", "Test-Time Adaptation", "LLM Evaluation", "Prompt Engineering"] },
+  { "category": "Cloud", "items": ["Azure OpenAI", "Azure AI Search", "Azure App Service", "Vercel"] },
+  { "category": "Languages & Frameworks", "items": ["Python", "FastAPI", "React", "JavaScript"] }
+]
