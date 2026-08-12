@@ -1,6 +1,9 @@
 [
-  { "category": "MLOps & Infra", "items": ["DVC", "MLflow", "Docker", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana"] },
-  { "category": "AI / ML", "items": ["RAG Pipelines", "Computer Vision", "Test-Time Adaptation", "LLM Evaluation", "Prompt Engineering"] },
-  { "category": "Cloud", "items": ["Azure OpenAI", "Azure AI Search", "Azure App Service", "Vercel"] },
-  { "category": "Languages & Frameworks", "items": ["Python", "FastAPI", "React", "JavaScript"] }
+  { "category": "AI / ML", "items": ["RAG Pipelines", "Agentic AI", "LangChain", "LangGraph", "LangSmith", "MCP", "Ollama", "Claude Code", "Computer Vision", "LLM Evaluation", "Prompt Engineering", "Test-Time Adaptation"] },
+  { "category": "MLOps & Infra", "items": ["DVC", "MLflow", "Docker", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana", "OpenTelemetry"] },
+  { "category": "Cloud", "items": ["Azure OpenAI", "Azure AI Search", "Azure AI Foundry", "Azure App Service", "Azure Application Insights", "Google Cloud Platform", "Vercel"] },
+  { "category": "Languages & Frameworks", "items": ["Python", "R", "SAS", "JavaScript", "FastAPI", "React"] },
+  { "category": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "Neo4j"] },
+  { "category": "Data Visualization", "items": ["Tableau", "D3.js", "Vega-Lite", "Excel"] },
+  { "category": "Collaboration", "items": ["Cultural Intelligence", "Technical Communication", "Teamwork", "Mentoring"] }
 ]

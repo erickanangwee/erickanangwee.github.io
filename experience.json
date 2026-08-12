@@ -2,15 +2,97 @@
   {
     "role": "AI DevOps Engineer",
     "org": "REP4FinLit",
-    "start": "2025",
+    "start": "May 2025",
     "end": "Present",
-    "description": "Building and operating ML/AI systems for a financial literacy learning platform, including a production RAG chatbot and supporting infrastructure."
+    "description": "Building and operating the AI systems behind a financial literacy learning platform for college students.",
+    "bullets": [
+      "Designed and built an end-to-end agentic RAG chatbot on Azure AI Search, Azure OpenAI and Azure App Services, delivering a financial literacy assistant inside the learning management system.",
+      "Implemented a multi-step FERPA guardrail system combining Presidio PII scanning, LLM-as-judge review and confidence scoring, so students cannot expose private data to the chatbot.",
+      "Instrumented the full request path with the OpenTelemetry SDK into Azure AI Foundry Tracing and Application Insights, emitting a span for every step a user question passes through.",
+      "Hardened the client for accessibility and cross-device use — theme toggles, keyboard navigation, resilient state management and API guardrails.",
+      "Worked across graphic designers, backend and frontend developers, community ambassadors and finance scriptwriters to architect a scalable, user-centered platform."
+    ]
   },
   {
-    "role": "Add your next role here",
-    "org": "Company name",
-    "start": "Year",
-    "end": "Year",
-    "description": "Replace this entry with real experience details."
+    "role": "ML Engineer / Data Analyst",
+    "org": "Cloudfactory Kenya Ltd, Nairobi, Kenya",
+    "start": "Aug 2020",
+    "end": "Aug 2023",
+    "description": "Curated and validated the training data and model output behind a global supply chain risk graph.",
+    "bullets": [
+      "Validated and curated large-scale supply chain relationship graphs covering millions of global company dependencies across supplier, customer, OEM, SaaS, PaaS, parent and subsidiary linkages.",
+      "Performed high-precision entity resolution and relationship verification, correcting automated extraction errors to improve graph accuracy and reliability for downstream ML models.",
+      "Labeled real-world disruption events — cyber incidents, geopolitical restrictions, natural disasters, sanctions, bankruptcies — to build high-quality supervised training datasets.",
+      "Ran human-in-the-loop model validation on ML-generated risk scores, dependency paths and disruption propagation predictions, feeding structured feedback into retraining pipelines.",
+      "Executed error analysis across graph-ML and NLP pipelines to identify systematic failure modes and recommend corrective labeling strategies."
+    ]
+  },
+  {
+    "role": "Teaching Assistant",
+    "org": "Grand Valley State University, College of Computing",
+    "start": "Jan 2025",
+    "end": "Apr 2025",
+    "description": "Supported an information visualization course while doing research in the Innovative AI and Data Science Research Lab.",
+    "bullets": [
+      "Built a convolutional neural network over spatial-temporal crime data as a research assistant in the Innovative AI and Data Science Research Lab, explaining the model's inner workings through interactive visualizations.",
+      "Assisted an information visualization course built around Tableau, Vega-Lite and D3.js, covering assignments and labs.",
+      "Held office hours for visualization questions and graded graduate assignments, projects and lab work on schedule.",
+      "Made rubrics accessible and understandable so students could follow standard operating procedures in lab assignments."
+    ]
+  },
+  {
+    "role": "Graduate Assistant",
+    "org": "Grand Valley State University, International Admissions and Recruitment",
+    "start": "Sep 2025",
+    "end": "Present",
+    "description": "Front-line support for international applicants navigating admissions and the F-1 visa process.",
+    "bullets": [
+      "Respond to 80–100 daily inquiries across the International Admissions Slate inbox and WhatsApp, covering application, admission and immigration questions.",
+      "Guide prospective international students through the full admissions and visa process, ensuring compliance with U.S. immigration policy and institutional requirements.",
+      "Build and deliver presentations for international recruitment webinars and F-1 visa mock interview sessions.",
+      "Organize and facilitate virtual mock visa interviews, improving applicant preparedness and visa approval outcomes.",
+      "Communicate program requirements, financial documentation guidelines and immigration updates across an applicant pool spanning 20+ countries."
+    ]
+  },
+  {
+    "role": "Graduate Assistant",
+    "org": "Grand Valley State University, College of Computing",
+    "start": "May 2024",
+    "end": "Apr 2025",
+    "description": "Worked on international student engagement across the College of Computing.",
+    "bullets": [
+      "Partnered with the International Student Engagement Coordinator on strategies to connect international students with the wider campus and off-campus community.",
+      "Analyzed student data to understand demographic makeup and tailor support to actual student needs.",
+      "Organized college-wide events with other university departments, creating networking and professional development opportunities.",
+      "Mobilized international students to attend on- and off-campus events, driving a marked increase in networking event attendance among the international student population."
+    ]
+  },
+  {
+    "role": "Resident Assistant",
+    "org": "Grand Valley State University, Housing and Residence Life",
+    "start": "Aug 2024",
+    "end": "Present",
+    "description": "Community leadership and crisis response for a residential floor of 60+ students.",
+    "bullets": [
+      "Mediate and resolve conflicts among 60+ residents through impartiality, active listening and collaborative problem-solving.",
+      "Plan and execute 5+ community building programs per semester, handling logistics, budgeting, marketing and post-event evaluation.",
+      "Respond to crisis incidents each semester, ensuring resident safety, completing accurate documentation and connecting individuals to campus support resources.",
+      "Mentor 60+ students through one-on-one meetings and group interactions, supporting academic success and personal growth.",
+      "Collaborate with a 10-member RA staff team while balancing full-time graduate coursework and a graduate assistantship."
+    ]
+  },
+  {
+    "role": "President",
+    "org": "International Friendships Inc — GVSU",
+    "start": "May 2024",
+    "end": "Present",
+    "description": "Leading the GVSU chapter of a student organization supporting international students.",
+    "bullets": [
+      "Lead an executive board of 5 officers running the chapter.",
+      "Coordinate communication and collaboration with IFI Grand Rapids and its volunteers.",
+      "Coordinate the implementation of the organization's on-campus events and programming.",
+      "Connect international students to on- and off-campus resources so they can settle into life while studying in the USA.",
+      "Coordinate collaborations between the organization and other student orgs and departments on campus."
+    ]
   }
 ]

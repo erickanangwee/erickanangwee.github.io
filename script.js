@@ -22,6 +22,13 @@ function renderExtraLinks(links) {
     .join('');
 }
 
+// Renders a role's optional `bullets` array. Returns '' rather than an empty
+// <ul> when there are none, so roles without bullets leave no stray markup.
+function renderBullets(bullets) {
+  if (!bullets || !bullets.length) return '';
+  return `<ul class="timeline__bullets">${bullets.map(b => `<li>${escapeHTML(b)}</li>`).join('')}</ul>`;
+}
+
 // ---------- Skills ----------
 fetch('skills.json')
   .then(res => res.json())
@@ -48,11 +55,30 @@ fetch('experience.json')
         <p class="timeline__meta">${escapeHTML(job.start)} — ${escapeHTML(job.end)}</p>
         <h3>${escapeHTML(job.role)}</h3>
         <p class="timeline__org">${escapeHTML(job.org)}</p>
-        <p>${escapeHTML(job.description)}</p>
+        ${job.description ? `<p>${escapeHTML(job.description)}</p>` : ''}
+        ${renderBullets(job.bullets)}
       </div>
     `).join('');
   })
   .catch(err => console.error('Could not load experience.json', err));
+
+// ---------- Education ----------
+// Reuses the experience section's .timeline styling — same shape of content
+// (date, heading, institution), so no new CSS is needed.
+fetch('education.json')
+  .then(res => res.json())
+  .then(items => {
+    const container = document.getElementById('education-list');
+    container.innerHTML = items.map(edu => `
+      <div class="timeline__item">
+        <p class="timeline__meta">${escapeHTML(edu.date)}</p>
+        <h3>${escapeHTML(edu.degree)}</h3>
+        <p class="timeline__org">${escapeHTML(edu.school)}</p>
+        ${edu.detail ? `<p>${escapeHTML(edu.detail)}</p>` : ''}
+      </div>
+    `).join('');
+  })
+  .catch(err => console.error('Could not load education.json', err));
 
 // ---------- Projects ----------
 fetch('projects.json')
