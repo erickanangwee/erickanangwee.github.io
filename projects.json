@@ -1,82 +1,181 @@
 [
   {
-    "title": "RAG Chatbot for REP4FinLit",
-    "date": "2026-05",
-    "description": "Retrieval-augmented chatbot for a LearnWorlds-hosted financial literacy platform. Combines Azure AI Search with Azure OpenAI for grounded answers, served through a FastAPI backend.",
-    "tags": ["RAG", "Azure OpenAI", "Azure AI Search", "FastAPI"],
+    "title": "Assignment Super-Agent",
+    "date": "2026-08",
+    "description": "Multi-agent CLI built on the Claude Agent SDK that classifies a university assignment brief and routes it through one of four pipelines — written work, data analysis, research, or coding — pausing for human approval after every stage. Each run ends with real deliverables plus an AI-assistance disclosure generated from what actually executed.",
+    "tags": ["Claude Agent SDK", "Multi-Agent", "Python", "CLI", "Human-in-the-Loop"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/college-assignment-super-agent"
+  },
+  {
+    "title": "The AI Times — Personal AI Newspaper",
+    "date": "2026-07",
+    "description": "Multi-agent system that collects AI news from ~25 curated sources (arXiv, lab blogs, global tech media, Hacker News), then runs a pipeline of Claude agents to filter, categorize, rank and summarize them into a daily broadsheet-style edition. FastAPI backend with a React reading UI; typical cost is a few cents per edition.",
+    "tags": ["Multi-Agent", "Anthropic API", "FastAPI", "React", "SQLite"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/ai-news-agent"
+  },
+  {
+    "title": "Job Application Agent",
+    "date": "2026-07",
+    "description": "Local-first job-search agent for international students that ranks postings by H1B visa tier and AI fit score, tailors a resume per job, drafts cover letters and recruiter outreach, and tracks every application in Google Sheets with follow-up reminders. Human-in-the-loop by design — it only ever writes drafts, and never submits an application or sends a message.",
+    "tags": ["Agents", "Python", "Google Sheets API", "Human-in-the-Loop", "Claude Code"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/job-application-agent"
+  },
+  {
+    "title": "Research Paper Agent",
+    "date": "2026-07",
+    "description": "Runs the research-paper lifecycle end to end — CFP discovery, literature review, gap analysis, outlining, analysis, drafting — and verifies what it writes: every citation is re-resolved against publisher metadata, every claim fact-checked against its cited source, and every number traced to a real result. FastAPI and Next.js, exporting to LaTeX, DOCX and Markdown.",
+    "tags": ["FastAPI", "Next.js", "Anthropic API", "Citation Verification", "LaTeX"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/research-paper-agent"
   },
   {
     "title": "GVSU Admissions Chatbot",
+    "date": "2026-05",
+    "description": "Answers prospective-student questions by searching gvsu.edu live rather than against a static index, reading the most relevant pages and returning a concise, grounded answer. Built out of admissions experience, where each question otherwise meant wading through unrelated search results. Claude for generation, Serper for search, containerized with Docker.",
+    "tags": ["RAG", "Anthropic API", "Serper", "Docker", "Node.js"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/gvsu-admissions-assistant"
+  },
+  {
+    "title": "Tomato Disease Detection Service",
+    "date": "2026-05",
+    "description": "Object-detection microservice that identifies disease on tomato leaves from a photograph. Packages a YOLOv5 model behind a containerized API with its own frontend, backed by a test suite and CI workflow.",
+    "tags": ["YOLOv5", "Computer Vision", "Object Detection", "Docker", "CI/CD"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/tomato-yolo-service"
+  },
+  {
+    "title": "Plant Leaf Health Classifier",
     "date": "2026-04",
-    "description": "Pivoted from a traditional RAG pipeline to a live Google Custom Search Engine restricted to gvsu.edu, paired with a GVSU-branded React frontend for accurate, always-current answers.",
-    "tags": ["React", "Google CSE", "Search"],
+    "description": "Classifies plant leaf images as healthy or diseased and automatically rejects non-leaf photos. Logistic regression over EfficientNet-B0 features trained on PlantDoc (2,568 images, 38 disease classes), served by FastAPI behind a React frontend — with DVC for data versioning, MLflow for experiment tracking, Kubernetes for deployment, and GitHub Actions retraining and redeploying on every push.",
+    "tags": ["MLOps", "DVC", "MLflow", "FastAPI", "Kubernetes", "EfficientNet"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/plant-health-classifier"
   },
   {
-    "title": "Tomato Disease Detection",
+    "title": "Tomato Leaf Health Classifier",
+    "date": "2026-04",
+    "description": "Binary classifier separating healthy tomato leaves from diseased or pest-infested ones, wired through a full MLOps pipeline: PlantDoc data versioned with DVC, experiments tracked in MLflow, the champion model served by FastAPI, containerized with Docker and deployed to Kubernetes.",
+    "tags": ["MLOps", "DVC", "MLflow", "FastAPI", "Docker", "Kubernetes"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/tomato-health-classifier"
+  },
+  {
+    "title": "Multi-Client Group Chat over TCP",
+    "date": "2026-04",
+    "description": "Multi-threaded TCP group chat built from raw sockets for CIS 654, developed in three parts. The server acts purely as a relay — it spawns a thread per connection, tracks connected clients by username, and broadcasts each message to everyone except the sender, giving real-time chat with no message routing logic on the client side. Team project with Tyler Avink and Andrew DeVries.",
+    "tags": ["Socket Programming", "TCP", "Multithreading", "Computer Networking", "Python"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/cis-654-socket-programming-project",
+    "links": [
+      { "label": "Parts 1–2", "url": "https://github.com/erickanangwee/socket-programming-project" }
+    ]
+  },
+  {
+    "title": "RAG Chatbot for REP4FinLit",
     "date": "2026-03",
-    "description": "YOLOv5-based microservice that detects tomato plant diseases from photos, with SVG bounding-box overlays and adjustable confidence thresholds. Deployed on Vercel.",
-    "tags": ["YOLOv5", "Computer Vision", "Vercel"],
+    "description": "Retrieval-augmented chatbot backend for a LearnWorlds-hosted financial literacy platform, grounding answers in Azure AI Search over Azure OpenAI through a streaming FastAPI service. Hardened for a student-data setting: Presidio and spaCy strip PII for FERPA compliance, guardrails constrain responses, slowapi rate-limits callers, and managed identity replaces stored secrets. Every LLM call is traced as an OpenTelemetry span into Azure Monitor, with a retrieval evaluation suite covering the pipeline.",
+    "tags": ["RAG", "Azure AI Search", "Azure OpenAI", "FastAPI", "LangChain", "OpenTelemetry", "FERPA"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/GVSUProjectGrandPath/Chatbot-Backend"
   },
   {
-    "title": "PhishGuard AI",
-    "date": "2026-02",
-    "description": "Phishing detection web app using the Anthropic API to score URLs and messages for risk, with a scan history view for tracking past checks.",
-    "tags": ["Anthropic API", "Security", "Web App"],
+    "title": "MLOps Toolchain Coursework",
+    "date": "2026-03",
+    "description": "A record of my MLOps coursework at Grand Valley State University (Winter 2026), working through the production ML toolchain end to end — containerization, orchestration, experiment tracking, data versioning, and CI/CD for machine learning. The individual demo repositories are linked below.",
+    "tags": ["MLOps", "Docker", "Kubernetes", "MLflow", "DVC", "GitHub Actions"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/Machine-Learning-Ops",
+    "links": [
+      { "label": "Docker", "url": "https://github.com/erickanangwee/docker-mlops-demo" },
+      { "label": "Kubernetes", "url": "https://github.com/erickanangwee/ml-kubernetes-demo-2" },
+      { "label": "MLflow", "url": "https://github.com/erickanangwee/mlflow-intro" },
+      { "label": "DVC", "url": "https://github.com/erickanangwee/dvc-deep-dive" },
+      { "label": "GitHub Actions", "url": "https://github.com/erickanangwee/github-actions-demo" },
+      { "label": "MLOps intro", "url": "https://github.com/erickanangwee/mlops-intro" }
+    ]
   },
   {
-    "title": "Add your next project here",
-    "date": "2026-01",
-    "description": "Replace this entry with a real project. Copy this block, fill in title/date/description/tags/links, and it will show up on the site automatically.",
-    "tags": ["placeholder"],
-    "link": "",
-    "repo": ""
-  },
-  {
-    "title": "Project placeholder 6",
-    "date": "2025-12",
-    "description": "Replace with project details.",
-    "tags": ["placeholder"],
-    "link": "",
-    "repo": ""
-  },
-  {
-    "title": "Project placeholder 7",
-    "date": "2025-11",
-    "description": "Replace with project details.",
-    "tags": ["placeholder"],
-    "link": "",
-    "repo": ""
-  },
-  {
-    "title": "Project placeholder 8",
+    "title": "Neural Networks: Classification vs Regression",
     "date": "2025-10",
-    "description": "Replace with project details.",
-    "tags": ["placeholder"],
+    "description": "Two PyTorch experiments contrasting how neural networks behave across task types: a multi-class classifier on the Iris dataset and a regression model on Boston Housing. Both are built from scratch as feedforward networks with two hidden layers, then compared through training curves and evaluation metrics under varying hyperparameters.",
+    "tags": ["PyTorch", "Deep Learning", "Classification", "Regression", "Jupyter"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/Supervised-Learning-with-Neural-Networks"
   },
   {
-    "title": "Project placeholder 9",
+    "title": "Merchant AI — Autonomous Trading Company",
     "date": "2025-09",
-    "description": "Replace with project details.",
-    "tags": ["placeholder"],
+    "description": "An AI-operated import/export business where software owns the full P&L loop — find, verify, buy, move, clear, stock, sell, collect, account — while a single human approves at eight defined gates. Built on an event-sourced trade state machine (19 states), a deterministic policy engine, and a balanced double-entry ledger, with every external touchpoint behind a mock/sandbox/live adapter. LLM judgment never bypasses policy code or a human gate.",
+    "tags": ["Multi-Agent", "Event Sourcing", "FastAPI", "Anthropic API", "Python"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/ai-merchant"
   },
   {
-    "title": "Project placeholder 10",
-    "date": "2025-08",
-    "description": "Replace with project details.",
-    "tags": ["placeholder"],
+    "title": "FinBot — AI Budgeting Assistant",
+    "date": "2025-07",
+    "description": "Interactive budgeting chatbot that walks users through setting financial goals and tracking income and expenses, returning AI-generated budgeting insights step by step. FastAPI backend against the OpenAI API with a React frontend.",
+    "tags": ["OpenAI API", "FastAPI", "React", "Chatbot", "FinTech"],
     "link": "",
-    "repo": ""
+    "repo": "https://github.com/erickanangwee/Budgeting-AI"
+  },
+  {
+    "title": "FinBot — Student Budgeting Chatbot",
+    "date": "2025-06",
+    "description": "An earlier, fully local iteration of FinBot aimed at students: LangChain over Ollama (Mistral) so no data leaves the machine, guiding users through student-specific income and expense categories via a chat interface and exporting the finished budget to Excel.",
+    "tags": ["LangChain", "Ollama", "Mistral", "FastAPI", "React"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/FinBotChatbot-6-16"
+  },
+  {
+    "title": "Fake News Detection",
+    "date": "2025-06",
+    "description": "Binary classifier distinguishing real from fake news articles using TF-IDF features and a feedforward neural network, built for a Kaggle-hosted NLP challenge.",
+    "tags": ["NLP", "TF-IDF", "Neural Networks", "Python"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/NLP-challenge"
+  },
+  {
+    "title": "CNN Image Classification Challenge",
+    "date": "2025-06",
+    "description": "Custom convolutional network (HighAccNet) trained end to end for an image-classification competition — image loading and preprocessing, training with best-checkpoint saving, and test-set inference written out in competition submission format.",
+    "tags": ["CNN", "PyTorch", "Computer Vision", "Kaggle"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/CNN-challenge-project"
+  },
+  {
+    "title": "Text-Based Wordle",
+    "date": "2024-03",
+    "description": "Terminal implementation of Wordle with colored feedback output, built around loops, dictionaries, sets and file I/O — and covered by both unit tests for the engine functions and end-to-end tests for full gameplay.",
+    "tags": ["Python", "Unit Testing", "End-to-End Testing", "CLI"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/Text-based-Version-of-Wordle-Game"
+  },
+  {
+    "title": "Date Functions Library",
+    "date": "2024-03",
+    "description": "Python module of date-handling functions built test-first: a complete set of black-box unit tests written against each function's specification before the implementations themselves, then used to verify them.",
+    "tags": ["Python", "Unit Testing", "Test-First"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/Date-Functions"
+  },
+  {
+    "title": "Electric Vehicle Population Analysis",
+    "date": "2024-01",
+    "description": "Exploratory data analysis of an electric vehicle population dataset — detecting and removing duplicate rows, resolving missing values, then visualizing the cleaned data to characterize the fleet.",
+    "tags": ["EDA", "Pandas", "Data Cleaning", "Visualization"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/Electric-Vehicles-Population"
+  },
+  {
+    "title": "Canadian Data Science Job Market 2024",
+    "date": "2024-01",
+    "description": "Analysis of the Canadian data science job market using a LinkedIn dataset from early 2024 — job availability across provinces and cities, the distribution of roles and job types, the qualifications and experience levels employers seek, and sector-specific demand for data science skills.",
+    "tags": ["EDA", "Pandas", "Data Analysis", "Kaggle"],
+    "link": "",
+    "repo": "https://github.com/erickanangwee/Data-Science-Jobs-2024-Linkedin-Canada"
   }
 ]

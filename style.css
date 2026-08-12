@@ -238,7 +238,8 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.25rem; }
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
 }
-.card__links { margin-top: auto; display: flex; gap: 1rem; }
+/* wrap so cards carrying several repo links (the MLOps umbrella entry) don't overflow */
+.card__links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 1rem; }
 .card__links a { color: var(--accent-dark); font-size: 0.9rem; text-decoration: none; font-weight: 500; }
 .card__links a:hover { text-decoration: underline; }
 

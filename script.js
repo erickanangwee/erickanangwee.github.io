@@ -4,7 +4,22 @@ function escapeHTML(str) {
   return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/>/g, '&gt;')
+    // Quotes matter because this output is interpolated into attributes
+    // (href="..."), where an unescaped quote would end the attribute early and
+    // let the rest of the value be parsed as markup.
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Renders a project's optional `links` array — used by umbrella entries that
+// stand in for several related repos (e.g. the MLOps coursework card). Entries
+// without a `links` field pass undefined and render nothing, so older-shaped
+// entries are unaffected.
+function renderExtraLinks(links) {
+  return (links || [])
+    .map(l => `<a href="${escapeHTML(l.url)}" target="_blank" rel="noopener">${escapeHTML(l.label)} →</a>`)
+    .join('');
 }
 
 // ---------- Skills ----------
@@ -43,7 +58,10 @@ fetch('experience.json')
 fetch('projects.json')
   .then(res => res.json())
   .then(projects => {
-    const sorted = [...projects].sort((a, b) => (a.date < b.date ? 1 : -1));
+    // Newest first. localeCompare returns 0 for equal dates, and Array#sort is
+    // stable, so projects sharing a month keep the order they have in the JSON
+    // file — that file's ordering is what decides ties.
+    const sorted = [...projects].sort((a, b) => b.date.localeCompare(a.date));
     const container = document.getElementById('projects-list');
     container.innerHTML = sorted.map(project => `
       <div class="card">
@@ -56,6 +74,7 @@ fetch('projects.json')
         <div class="card__links">
           ${project.link ? `<a href="${escapeHTML(project.link)}" target="_blank" rel="noopener">Live demo →</a>` : ''}
           ${project.repo ? `<a href="${escapeHTML(project.repo)}" target="_blank" rel="noopener">Code →</a>` : ''}
+          ${renderExtraLinks(project.links)}
         </div>
       </div>
     `).join('');
